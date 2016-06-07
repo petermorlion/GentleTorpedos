@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/petermorlion/GentleTorpedos/issues"
   },
-  "homepage": "https://github.com/petermorlion/GentleTorpedos"
+  "homepage": "https://github.com/petermorlion/GentleTorpedos",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
 }
