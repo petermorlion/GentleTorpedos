@@ -2,6 +2,7 @@
 
 var gulp = require('gulp');
 var sass = require('gulp-sass');
+var browserSync = require('browser-sync').create();
 
 var paths = {
   scss: './src/**/*.scss',
@@ -24,8 +25,14 @@ gulp.task('html', function() {
     .pipe(gulp.dest(paths.dist))
 });
 
-gulp.task('build', ['sass', 'html'])
+gulp.task('serve', ['sass', 'html'], function() {
+  browserSync.init({
+    server: paths.dist
+  });
 
-gulp.task('watch', function() {
-    gulp.watch('./src/**/*.*', ['build']);
+  gulp.watch(paths.scss, ['sass']);
+  gulp.watch(paths.html, ['html'])
+  gulp.watch(paths.dist).on('change', browserSync.reload);
 });
+
+gulp.task('build', ['sass', 'html'])
