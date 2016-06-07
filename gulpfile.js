@@ -25,3 +25,7 @@ gulp.task('html', function() {
 });
 
 gulp.task('build', ['sass', 'html'])
+
+gulp.task('watch', function() {
+    gulp.watch('./src/**/*.*', ['build']);
+});
