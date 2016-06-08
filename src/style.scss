@@ -1,3 +1,7 @@
+body {
+  background-color: blue;
+}
+
 .parallax {
   perspective: 1px;
   height: 100vh;
@@ -18,5 +22,5 @@
 }
 
 .parallax__layer--back {
-  transform: translateZ(-1px);
+  transform: translateZ(-1px) scale(2);
 }

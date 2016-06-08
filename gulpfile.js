@@ -13,16 +13,14 @@ var paths = {
 gulp.task('sass', function () {
   return gulp.src(paths.scss)
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest(paths.dist));
-});
-
-gulp.task('sass:watch', function () {
-  gulp.watch(paths.scss, ['sass']);
+    .pipe(gulp.dest(paths.dist))
+    .pipe(browserSync.stream());
 });
 
 gulp.task('html', function() {
   return gulp.src(paths.html)
     .pipe(gulp.dest(paths.dist))
+    .pipe(browserSync.stream());
 });
 
 gulp.task('serve', ['sass', 'html'], function() {
@@ -31,8 +29,8 @@ gulp.task('serve', ['sass', 'html'], function() {
   });
 
   gulp.watch(paths.scss, ['sass']);
-  gulp.watch(paths.html, ['html'])
-  gulp.watch(paths.dist).on('change', browserSync.reload);
+  gulp.watch(paths.html, ['html']);
+  //gulp.watch(paths.dist).on('change', browserSync.reload);
 });
 
 gulp.task('build', ['sass', 'html'])
