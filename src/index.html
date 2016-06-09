@@ -1,14 +1,78 @@
+
+<!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" href="style.css" type="text/css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>A grouped pure CSS parallax demo (with webkit overflow fix) by Keith Clark</title>
+<link rel="stylesheet" type="text/css" href="style.css">
 </head>
+
 <body>
+
+  <div class="demo__info">
+    Pure CSS parallax scroll demo #3 by Keith Clark. Please read the <a href="../">blog post</a> for more information.
+  </div>
+
   <div class="parallax">
-    <div class="parallax__layer parallax__layer--back">
-      ...test
+    <div id="group1" class="parallax__group">
+      <div class="parallax__layer parallax__layer--base">
+        <div class="title">Zin in een nieuwe sport?</div>
+      </div>
     </div>
-    <div class="parallax__layer parallax__layer--base">
-      ...
+    <div id="group2" class="parallax__group">
+      <div class="parallax__layer parallax__layer--base">
+        <div class="title">Gentle Torpedo's</div>
+      </div>
+      <div class="parallax__layer parallax__layer--back">
+        <div class="title"></div>
+      </div>
+    </div>
+    <div id="group3" class="parallax__group">
+      <div class="parallax__layer parallax__layer--fore">
+        <div class="title"></div>
+      </div>
+      <div class="parallax__layer parallax__layer--base">
+        <div class="title">
+          <p>Zin in sport?</p>
+          <p>Zin in een <strong>sociale</strong> sport?</p>
+          <p>Zin in een <strong>gemengde</strong> sport?</p>
+          <p>Zin in een <strong>competitieve</strong> ploegsport?</p>
+          <p>Zin in een <strong>coole</strong> sport?</p>
+        </div>
+      </div>
+    </div>
+    <div id="group4" class="parallax__group">
+      <div class="parallax__layer parallax__layer--base">
+        <div class="title">Base Layer</div>
+      </div>
+      <div class="parallax__layer parallax__layer--back">
+        <div class="title">Background Layer</div>
+      </div>
+      <div class="parallax__layer parallax__layer--deep">
+        <div class="title">Deep Background Layer</div>
+      </div>
+    </div>
+    <div id="group5" class="parallax__group">
+      <div class="parallax__layer parallax__layer--fore">
+        <div class="title">Foreground Layer</div>
+      </div>
+      <div class="parallax__layer parallax__layer--base">
+        <div class="title">Base Layer</div>
+      </div>
+    </div>
+    <div id="group6" class="parallax__group">
+      <div class="parallax__layer parallax__layer--back">
+        <div class="title">Background Layer</div>
+      </div>
+      <div class="parallax__layer parallax__layer--base">
+        <div class="title">Base Layer</div>
+      </div>
+    </div>
+    <div id="group7" class="parallax__group">
+      <div class="parallax__layer parallax__layer--base">
+        <div class="title">Base Layer</div>
+      </div>
     </div>
   </div>
 </body>
