@@ -28,6 +28,7 @@
   bottom: 0;
   -webkit-transform-origin-x: 100%;
   transform-origin-x: 100%;
+  background-size: cover;
 }
 
 .parallax__layer--fore {
@@ -63,7 +64,7 @@ body, html {
 }
 
 body {
-  font: 100% / 1.5 Arial;
+  font: 100% / 1.5 'Podkova', serif;
 }
 
 * {
@@ -98,13 +99,18 @@ body {
 
 #group1 {
   z-index: 5; /* slide over group 2 */
+  font-size: 400%;
+  color: #ffd253;
 }
 #group1 .parallax__layer--base {
   background: url('bg.png');
+  background-size: cover;
 }
 
 #group2 {
   z-index: 3; /* slide under groups 1 and 3 */
+  font-size: 300%;
+  color: #ffd253;
 }
 #group2 .parallax__layer--back {
   background-image: url('bg2.png');
@@ -120,6 +126,7 @@ body {
 
 #group4 {
   z-index: 2; /* slide under group 3 and 5 */
+  font-size: 150%;
 }
 #group4 .parallax__layer--deep {
   background: rgb(184,223,101);
