@@ -129,7 +129,11 @@ body {
   z-index: 4; /* slide over group 2 and 4 */
 }
 #group3 .parallax__layer--base {
-  background: #ffd253;
+  background-image: url('meisjes.png');
+  background-position: bottom right;
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-color: #ffd253;
 }
 
 #group4 {
