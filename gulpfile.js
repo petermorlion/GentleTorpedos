@@ -53,8 +53,9 @@ gulp.task('deploy', ['build'], function() {
     }, function(res){
       gulp.src(paths.dist + '/**/*.*')
         .pipe(ftp({
-          host: 'ftp.torpedos.be',
+          host: 'windowsftp.easyhost.be',
           user: 'torpedosbe@torpedos.be',
+          remotePath: 'www',
           pass: res.pass
         }));
     }));
