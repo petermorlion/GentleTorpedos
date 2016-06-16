@@ -3,6 +3,8 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync').create();
+var ftp = require('gulp-ftp');
+var prompt = require('gulp-prompt');
 
 var paths = {
   scss: './src/**/*.scss',
@@ -41,3 +43,19 @@ gulp.task('serve', ['sass', 'html', 'img'], function() {
 });
 
 gulp.task('build', ['sass', 'html', 'img'])
+
+gulp.task('deploy', ['build'], function() {
+  return gulp.src(paths.dist)
+    .pipe(prompt.prompt({
+      type: 'password',
+      name: 'pass',
+      message: 'Please enter the FTP password'
+    }, function(res){
+      gulp.src(paths.dist + '/**/*.*')
+        .pipe(ftp({
+          host: 'ftp.torpedos.be',
+          user: 'torpedosbe@torpedos.be',
+          pass: res.pass
+        }));
+    }));
+});
