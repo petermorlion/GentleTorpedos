@@ -64,7 +64,7 @@ body, html {
 }
 
 body {
-  font: 100% / 1.5 'GeoSlb712 Md BT', serif;
+  font: 80% / 1.5 'GeoSlb712 Md BT', serif;
 }
 
 * {
@@ -84,6 +84,15 @@ body {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+
+#group3 .title {
+  left: 40%;
+}
+
+#group4 .title {
+  left: 50%;
+  width: 75%;
 }
 
 .title.small {
