@@ -155,9 +155,11 @@ body {
 
 #group5 {
   z-index: 3; /* slide over group 4 and 6 */
+  color: #F5EB64;  
 }
 #group5 .parallax__layer--base {
-  background: rgb(214,229,100);
+  background-image: url('boris.png');
+  background-position: center center;
 }
 
 #group6 {
