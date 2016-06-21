@@ -63,6 +63,14 @@ body, html {
   overflow: hidden;
 }
 
+@font-face {
+  font-family: 'GeoSlb712 Md BT';
+  src: url('geoslb712-md-bt-bold.eot');
+  src: url('geoslb712-md-bt-bold.eot?#iefix') format('embedded-opentype'),
+       url('geoslb712-md-bt-bold.woff') format('woff'),
+       url('geoslb712-md-bt-bold.ttf') format('truetype')
+}
+
 body {
   font: 80% / 1.5 'GeoSlb712 Md BT', serif;
 }
@@ -111,6 +119,14 @@ body {
   height: 50px;
 }
 
+.mail-link {
+  text-decoration: none;
+}
+
+.mail-link:hover {
+  text-decoration: underline;
+}
+
 /* style the groups
 --------------------------------------------- */
 
@@ -136,13 +152,14 @@ body {
 
 #group3 {
   z-index: 4; /* slide over group 2 and 4 */
+  color: #ffd253;
 }
 #group3 .parallax__layer--base {
   background-image: url('meisjes.png');
   background-position: bottom right;
   background-size: 40%;
   background-repeat: no-repeat;
-  background-color: #ffd253;
+  background-color: rgb(141, 182, 58);
 }
 
 #group4 {
@@ -155,7 +172,7 @@ body {
 
 #group5 {
   z-index: 3; /* slide over group 4 and 6 */
-  color: #F5EB64;  
+  color: #F5EB64;
 }
 #group5 .parallax__layer--base {
   background-image: url('boris.png');

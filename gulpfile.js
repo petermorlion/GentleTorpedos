@@ -10,6 +10,7 @@ var paths = {
   scss: './src/**/*.scss',
   html: './src/**/*.html',
   img: './src/**/*.png',
+  fonts: './src/fonts/*.*',
   dist: './dist'
 };
 
@@ -32,7 +33,13 @@ gulp.task('img', function() {
     .pipe(browserSync.stream());
 });
 
-gulp.task('serve', ['sass', 'html', 'img'], function() {
+gulp.task('fonts', function() {
+  return gulp.src(paths.fonts)
+    .pipe(gulp.dest(paths.dist))
+    .pipe(browserSync.stream());
+});
+
+gulp.task('serve', ['sass', 'html', 'img', 'fonts'], function() {
   browserSync.init({
     server: paths.dist
   });
@@ -40,9 +47,10 @@ gulp.task('serve', ['sass', 'html', 'img'], function() {
   gulp.watch(paths.scss, ['sass']);
   gulp.watch(paths.html, ['html']);
   gulp.watch(paths.img, ['img']);
+  gulp.watch(paths.fonts, ['fonts']);
 });
 
-gulp.task('build', ['sass', 'html', 'img'])
+gulp.task('build', ['sass', 'html', 'img', 'fonts'])
 
 gulp.task('deploy', ['build'], function() {
   return gulp.src(paths.dist)
