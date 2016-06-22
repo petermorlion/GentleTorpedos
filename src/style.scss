@@ -121,6 +121,7 @@ body {
 
 .mail-link {
   text-decoration: none;
+  color: rgb(141, 182, 58);
 }
 
 .mail-link:hover {
@@ -181,13 +182,20 @@ body {
 
 #group6 {
   z-index: 2; /* slide under group 5 and 7 */
+  font-size: 200%;
 }
 #group6 .parallax__layer--back {
-  background: rgb(245,235,100);
+  background-color: rgb(245,235,100);
+  background-image: url('gentle-logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 #group7 {
   z-index: 3; /* slide over group 7 */
+  font-size: 250%;
+  color: rgb(141, 182, 58);
 }
 #group7 .parallax__layer--base {
   background: rgb(255,241,100);
