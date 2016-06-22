@@ -1,3 +1,9 @@
+/* Variables
+--------------------------------------------- */
+$dark: rgb(141, 182, 58);
+$light: rgb(184, 223, 101);
+$light: lighten(saturate($dark, 15%), 15%);
+
 /* Parallax base styles
 --------------------------------------------- */
 
@@ -120,7 +126,7 @@ body {
 }
 
 .mail-link {
-  color: rgb(141, 182, 58);
+  color: $dark;
 }
 
 /* style the groups
@@ -155,7 +161,7 @@ body {
   background-position: bottom right;
   background-size: 40%;
   background-repeat: no-repeat;
-  background-color: rgb(141, 182, 58);
+  background-color: $dark;
 }
 
 #group4 {
@@ -163,7 +169,7 @@ body {
   font-size: 150%;
 }
 #group4 .parallax__layer--deep {
-  background: rgb(184,223,101);
+  background: $light;
 }
 
 #group5 {
@@ -190,7 +196,7 @@ body {
 #group7 {
   z-index: 3; /* slide over group 7 */
   font-size: 250%;
-  color: rgb(141, 182, 58);
+  color: $dark;
 }
 #group7 .parallax__layer--base {
   background: rgb(255,241,100);
