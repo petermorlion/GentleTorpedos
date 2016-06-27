@@ -1,8 +1,8 @@
 /* Variables
 --------------------------------------------- */
 $dark: rgb(141, 182, 58);
-$light: rgb(184, 223, 101);
 $light: lighten(saturate($dark, 15%), 15%);
+$extraDark: darken($dark, 30%);
 
 /* Parallax base styles
 --------------------------------------------- */
@@ -149,7 +149,13 @@ body {
 }
 #group2 .parallax__layer--back {
   background-image: url('bg2.png');
-  background-position: center -350px;
+  background-size: cover;
+}
+
+@media (min-width: 1024px) {
+  #group2 .parallax__layer--back {
+    background-position: center -300px;
+  }
 }
 
 #group3 {
@@ -159,14 +165,21 @@ body {
 #group3 .parallax__layer--base {
   background-image: url('meisjes.png');
   background-position: bottom right;
-  background-size: 40%;
+  background-size: 50%;
   background-repeat: no-repeat;
   background-color: $dark;
+}
+
+@media (max-width: 1023px) {
+  #group3 .parallax__layer--base {
+    background-size: 65%;
+  }
 }
 
 #group4 {
   z-index: 2; /* slide under group 3 and 5 */
   font-size: 150%;
+  color: $extraDark;
 }
 #group4 .parallax__layer--deep {
   background: $light;
@@ -191,6 +204,11 @@ body {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+}
+@media (max-width: 700px) {
+  #group6 {
+    font-size: 100%
+  }
 }
 
 #group7 {
