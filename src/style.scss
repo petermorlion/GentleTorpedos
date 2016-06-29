@@ -145,7 +145,7 @@ body {
 #group2 {
   z-index: 3; /* slide under groups 1 and 3 */
   font-size: 300%;
-  color: #ffd253;
+  color: $extraDark;
 }
 #group2 .parallax__layer--back {
   background-image: url('bg2.png');
@@ -163,9 +163,8 @@ body {
   color: #ffd253;
 }
 #group3 .parallax__layer--base {
-  background-image: url('meisjes.png');
-  background-position: bottom right;
-  background-size: 50%;
+  background-image: url('EYUC_9567_graded.png');
+  background-size: cover;
   background-repeat: no-repeat;
   background-color: $dark;
 }
