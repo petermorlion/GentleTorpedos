@@ -138,7 +138,7 @@ body {
   color: #ffd253;
 }
 #group1 .parallax__layer--base {
-  background: url('bg.png');
+  background: url('Optimized-bg.png');
   background-size: cover;
 }
 
@@ -148,7 +148,7 @@ body {
   color: $extraDark;
 }
 #group2 .parallax__layer--back {
-  background-image: url('bg2.png');
+  background-image: url('Optimized-bg2.png');
   background-size: cover;
 }
 
@@ -163,16 +163,11 @@ body {
   color: #ffd253;
 }
 #group3 .parallax__layer--base {
-  background-image: url('EYUC_9567_graded.png');
+  background-image: url('Optimized-EYUC_9567_graded.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-color: $dark;
-}
-
-@media (max-width: 1023px) {
-  #group3 .parallax__layer--base {
-    background-size: 65%;
-  }
+  background-position: center;
 }
 
 #group4 {
@@ -189,7 +184,7 @@ body {
   color: #F5EB64;
 }
 #group5 .parallax__layer--base {
-  background-image: url('boris.png');
+  background-image: url('Optimized-boris.png');
   background-position: center center;
 }
 
@@ -214,6 +209,15 @@ body {
   z-index: 3; /* slide over group 7 */
   font-size: 250%;
   color: $dark;
+}
+#group7 .team-name {
+  position: relative;
+  top: 100px;
+}
+@media(max-width: 1000px) {
+  #group7 .team-name {
+    font-size: 60%;
+  }
 }
 #group7 .parallax__layer--base {
   background: rgb(255,241,100);
