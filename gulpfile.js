@@ -63,7 +63,7 @@ gulp.task('deploy', ['build'], function() {
         .pipe(ftp({
           host: 'windowsftp.easyhost.be',
           user: 'torpedosbe@torpedos.be',
-          remotePath: 'www',
+          remotePath: 'subsites/torpedos',
           pass: res.pass
         }));
     }));
