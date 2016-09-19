@@ -190,6 +190,9 @@ body {
   font-size: 150%;
   color: $extraDark;
 }
+#group4 .parallax__layer--base {
+  pointer-events: none;
+}
 #group4 .parallax__layer--deep {
   background: $light;
 }
